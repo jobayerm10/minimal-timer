@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #181818, #000000);
+  color: white;
+}
+
+.app {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  color: orange;
+}
+
+.timer-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: breathe 5s infinite ease-in-out;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+  }
+}
+
+#time {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.controls button,
+.ambient button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover,
+.ambient button:hover {
+  background: rgba(0, 255, 200, 0.4);
+}
